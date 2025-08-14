@@ -1,8 +1,8 @@
 
-const valorHora = 25;
-const horasTrabalhadas = 160;
+const valorHora = Number(prompt("quanto c ganha por hr"))
+const horasTrabalhadas = Number(prompt("quantas hrd c trabalhou"))
 
 
-const salario = valorHora * horasTrabalhadas;
+const salario = valorHora * horasTrabalhadas
 
-console.log(`O salário do funcionário é: R$ ${salario.toFixed(2)}`);
+alert("O salário do funcionário é: " + salario + " reais")

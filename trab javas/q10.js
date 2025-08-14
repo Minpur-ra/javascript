@@ -1,8 +1,8 @@
 
-let  anoNascimento = 
-const anoAtual = new Date().getFullYear()
+let  anoNascimento = Number(prompt("insira seu ano de nascimento"))
+const anoAtual = Number(prompt("ano atual"))
 
 
 const idade = anoAtual - anoNascimento
 
-console.log(`A idade aproximada da pessoa é: ${idade} anos`)
+alert("A idade aproximada da pessoa é:"+ idade)
