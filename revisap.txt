@@ -1,0 +1,74 @@
+1) Arquivo NaN: NaN significa "not a Number", ou seja, Não é um número, e ele aparece qunado a gente tenta fazer uma operação matemática que não tenha um resultado numérico, tipo quando você tenta dividir zero por zero
+
+2) tem três jeitos de colocar, o primeiro é inline, o mais fácil, onde você coloca o css na linha do próprio html, só que aí pra isso você abre a tag "style="conteudo"" mas tem desvantagem pq isso bagunça e as vezes prejudica quando tem texto igual; o outro jeito é o Interno, onde vc coloca a tag "style" no <head> da página, assim todos csss ficam num lugar só, mas só funciona na página que foi colocado; e, por último, a externa, que honestamente é a melhor, onde vc cria um arquivo css separado e depois só linka ele no head  na página html que vc quiser que fique modificada, assim: <head> <link rel="stylesheet" href="estilo.css"> <head>
+a grande vantagem é que a gente pode usar o mesmo arquivo CSS em várias páginas, e se precisar mudar alguma coisa, é só mexer em um arquivo e todas as páginas já atualizam. Isso deixa o código mais organizado e fácil de dar manutenção.
+a principal diferença entre elas é onde o código CSS fica. A inline é mais específica, só afeta uma tag. A interna afeta só a página onde está. E a externa afeta qualquer página que a gente linkar, por isso é a mais usada em sites maiores. A ordem de prioridade também é diferente, tipo, se a gente usa as três no mesmo elemento, a inline sempre ganha e sobrescreve as outras. O professor falou que isso é a cascata do CSS.
+
+3) a principal diferença é no comportamento de exibição e no tipo de conteúdo que elas podem conter, sendo a div um elemento de bloco, enquanto span é um elemento inline, significando que div ocupa toda a largura disponível e efetua uma quebra de linha antes e depois, já span ocupa apenas o espaço necessário e age como linha de texto
+
+exemplo: <div>
+<p> paragrafo dentro da div </p>
+<p> outro paragrafo na div </p></div>
+
+<p> outro paragrafo, mas fora da div <span style="color: red;">em vermelho</span> e outra palavra normal </p>
+
+4) A <head> é literalmente a cabeça do site, contendo informações não visíveis mas essenciais para o site, como: motores de busca, linkagem css, titulo da página, favicon etc.
+
+5) Listas ordenadas são usadas quando a informação que vc quer apresentar tem que aparecer em ordem, quando a sequencia eh importante, com ordem correta a ser apresentada: 
+<ol>
+  <li>acordar</li>
+  <li>Tomar café da manhã</li>
+  <li>voltar a dormir</li>
+</ol>
+  listas não ordenadas são usadas quando a ordem dos itens não faz diferença, como por exemplo uma lista de compras:
+<ul>
+  <li>Café</li>
+  <li>Leite</li>
+  <li>Pão</li>
+</ul>
+
+6) no geral, organização da distribuição das coisas na página, o display define como o html vai ser renderizado na página, controlando a exibição das coisas e o comportamento delas em relação aos outros elementos. a diferença entre inline e inline-bock se põe em: inline o elemento se comporta como parte do texto, ocupando só o espaço necessário e permitindo que outros elementos apareçam na mesma linha se tiver espaço, já o inline-block o elemento se comporta como um bloco mas não cria quebras de linha, mas permite o ajuste de largura, altura, margens etc.
+
+7) o box model, é um conceito que define como cada elemento html é tratado que nem uma caixa retangular com propriedades que alteram seu tamanho e espaçamento. é composto por: conteúdo, preenchimento, borda e margem. Outras coisas relevantes dentro do box incluem width, que é a largura, height, que é altura, padding, preenchimento entre os espaços
+
+8) as tags semânticas fornecem significado e estrutura ao conteúdo da página auxiliando na organização e compreensão tanto para navegadores e mecanismos de busca quanto para users.
+header: cabeçalho da página com coisas como titulo, ícone, navegação etc
+section: seção genérica no documento  que agrupa conteúdo tematicamente, cada seção tem tema definido
+article: conteúdo independente que faz sentido por si só, como um artigo de blog/notícia
+footer: rodapé numa página, com coisas como: contato, direitos autorais etc 
+
+9) o "target _blank" faz com que a pessoa ao clicar no link, abra uma outra aba e leve-a para o local que o link leva, sem sair/perder o conteúdo/página que está. entretanto, isso leva o usuário a riscos, pq a nova aba tem acesso ao window.opener que é uma referência à página que abriu, o que o pode ser usado pra manipular a página original, redirecionando para um url fake com phishing, além de ter acesso aos seus dados e ler eles.
+
+10) a propriedade flex no css define o comportamento de um item flexível em um container tbm flexível, no geral controlam como um item flexível cresce, escolhe e define seu tamanho inicial, respectivamente. ela pode ser usada com um, dois ou três valores.
+se com um: Define apenas o valor de flex-grow, com os outros dois valores sendo 1 e auto, respectivamente. Por exemplo, flex: 1 é equivalente a flex: 1 1 auto.
+se com dois: Define os valores de flex-grow e flex-shrink, com o terceiro valor sendo auto. Por exemplo, flex: 2 1 é equivalente a flex: 2 1 auto.
+três valores: Define os valores de flex-grow, flex-shrink e flex-basis, respectivamente. Por exemplo, flex: 1 0 200px.
+
+11) as transições (transitions) permitem que você crie efeitos de animação simples, suavizando a mudança de valores de propriedades CSS ao longo de um período de tempo especificado. Ao invés de uma mudança instantânea, a transição preenche a lacuna com quadros intermediários, criando um efeito suave e não grosso. elas podem ser animadas e com transições, como width, height, background-color, opacity, transform (esse principalmente, pq ele altera a direção)
+exemplo: 
+.botao {
+  background-color: blue;
+  width: 100px;
+  height: 50px;
+  transition: width 0.3s ease, background-color 0.5s ease; /* Transição para width e background-color */
+}
+
+.botao:hover {
+  width: 200px;
+  background-color: red;
+}
+
+12) 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
