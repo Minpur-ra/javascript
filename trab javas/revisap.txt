@@ -1,0 +1,111 @@
+1) Arquivo NaN: NaN significa "not a Number", ou seja, Não é um número, e ele aparece qunado a gente tenta fazer uma operação matemática que não tenha um resultado numérico, tipo quando você tenta dividir zero por zero
+
+2) tem três jeitos de colocar, o primeiro é inline, o mais fácil, onde você coloca o css na linha do próprio html, só que aí pra isso você abre a tag "style="conteudo"" mas tem desvantagem pq isso bagunça e as vezes prejudica quando tem texto igual; o outro jeito é o Interno, onde vc coloca a tag "style" no <head> da página, assim todos csss ficam num lugar só, mas só funciona na página que foi colocado; e, por último, a externa, que honestamente é a melhor, onde vc cria um arquivo css separado e depois só linka ele no head  na página html que vc quiser que fique modificada, assim: <head> <link rel="stylesheet" href="estilo.css"> <head>
+a grande vantagem é que a gente pode usar o mesmo arquivo CSS em várias páginas, e se precisar mudar alguma coisa, é só mexer em um arquivo e todas as páginas já atualizam. Isso deixa o código mais organizado e fácil de dar manutenção.
+a principal diferença entre elas é onde o código CSS fica. A inline é mais específica, só afeta uma tag. A interna afeta só a página onde está. E a externa afeta qualquer página que a gente linkar, por isso é a mais usada em sites maiores. A ordem de prioridade também é diferente, tipo, se a gente usa as três no mesmo elemento, a inline sempre ganha e sobrescreve as outras. O professor falou que isso é a cascata do CSS.
+
+3) a principal diferença é no comportamento de exibição e no tipo de conteúdo que elas podem conter, sendo a div um elemento de bloco, enquanto span é um elemento inline, significando que div ocupa toda a largura disponível e efetua uma quebra de linha antes e depois, já span ocupa apenas o espaço necessário e age como linha de texto
+
+exemplo: <div>
+<p> paragrafo dentro da div </p>
+<p> outro paragrafo na div </p></div>
+
+<p> outro paragrafo, mas fora da div <span style="color: red;">em vermelho</span> e outra palavra normal </p>
+
+4) A <head> é literalmente a cabeça do site, contendo informações não visíveis mas essenciais para o site, como: motores de busca, linkagem css, titulo da página, favicon etc.
+
+5) Listas ordenadas são usadas quando a informação que vc quer apresentar tem que aparecer em ordem, quando a sequencia eh importante, com ordem correta a ser apresentada: 
+<ol>
+  <li>acordar</li>
+  <li>Tomar café da manhã</li>
+  <li>voltar a dormir</li>
+</ol>
+  listas não ordenadas são usadas quando a ordem dos itens não faz diferença, como por exemplo uma lista de compras:
+<ul>
+  <li>Café</li>
+  <li>Leite</li>
+  <li>Pão</li>
+</ul>
+
+6) no geral, organização da distribuição das coisas na página, o display define como o html vai ser renderizado na página, controlando a exibição das coisas e o comportamento delas em relação aos outros elementos. a diferença entre inline e inline-bock se põe em: inline o elemento se comporta como parte do texto, ocupando só o espaço necessário e permitindo que outros elementos apareçam na mesma linha se tiver espaço, já o inline-block o elemento se comporta como um bloco mas não cria quebras de linha, mas permite o ajuste de largura, altura, margens etc.
+
+7) o box model, é um conceito que define como cada elemento html é tratado que nem uma caixa retangular com propriedades que alteram seu tamanho e espaçamento. é composto por: conteúdo, preenchimento, borda e margem. Outras coisas relevantes dentro do box incluem width, que é a largura, height, que é altura, padding, preenchimento entre os espaços
+
+8) as tags semânticas fornecem significado e estrutura ao conteúdo da página auxiliando na organização e compreensão tanto para navegadores e mecanismos de busca quanto para users.
+header: cabeçalho da página com coisas como titulo, ícone, navegação etc
+section: seção genérica no documento  que agrupa conteúdo tematicamente, cada seção tem tema definido
+article: conteúdo independente que faz sentido por si só, como um artigo de blog/notícia
+footer: rodapé numa página, com coisas como: contato, direitos autorais etc 
+
+9) o "target _blank" faz com que a pessoa ao clicar no link, abra uma outra aba e leve-a para o local que o link leva, sem sair/perder o conteúdo/página que está. entretanto, isso leva o usuário a riscos, pq a nova aba tem acesso ao window.opener que é uma referência à página que abriu, o que o pode ser usado pra manipular a página original, redirecionando para um url fake com phishing, além de ter acesso aos seus dados e ler eles.
+
+10) a propriedade flex no css define o comportamento de um item flexível em um container tbm flexível, no geral controlam como um item flexível cresce, escolhe e define seu tamanho inicial, respectivamente. ela pode ser usada com um, dois ou três valores.
+se com um: Define apenas o valor de flex-grow, com os outros dois valores sendo 1 e auto, respectivamente. Por exemplo, flex: 1 é equivalente a flex: 1 1 auto.
+se com dois: Define os valores de flex-grow e flex-shrink, com o terceiro valor sendo auto. Por exemplo, flex: 2 1 é equivalente a flex: 2 1 auto.
+três valores: Define os valores de flex-grow, flex-shrink e flex-basis, respectivamente. Por exemplo, flex: 1 0 200px.
+
+11) as transições (transitions) permitem que você crie efeitos de animação simples, suavizando a mudança de valores de propriedades CSS ao longo de um período de tempo especificado. Ao invés de uma mudança instantânea, a transição preenche a lacuna com quadros intermediários, criando um efeito suave e não grosso. elas podem ser animadas e com transições, como width, height, background-color, opacity, transform (esse principalmente, pq ele altera a direção)
+exemplo: 
+.botao {
+  background-color: blue;
+  width: 100px;
+  height: 50px;
+  transition: width 0.3s ease, background-color 0.5s ease; /* Transição para width e background-color */
+}
+
+.botao:hover {
+  width: 200px;
+  background-color: red;
+}
+
+16 As diferenças principais entre const, var e let estão relacionadas ao escopo, possibilidade de reatribuição e hoisting. A palavra-chave var possui
+escopo de função, ou seja, mesmo se declarada dentro de um bloco, será acessível fora dele. Já let e const têm escopo de bloco, permanecendo disponíveis apenas dentro de chaves onde foram declaradas. Const não permite reatribuição, mas permite alterar valores internos de objetos e arrays. Var sofre hoisting e é inicializada como undefined, enquanto let e const também sofrem hoisting, mas ficam em zona morta temporal, gerando erro se acessadas antes da declaração. Por exemplo, var x = 1 dentro de um if poderá ser acessada fora do if, mas let y = 2 dentro do mesmo bloco não poderá. Const z = 3 não pode ser reatribuído, mas se for um objeto, suas propriedades podem ser alteradas.
+
+
+17 No código apresentado, a execução começa com a declaração das variáveis y e z usando let e const, com valores 20 e 30, respectivamente. Em seguida, há 
+uma tentativa de acessar a variável x antes de sua declaração com var, o que provoca um ReferenceError, pois var sofre hoisting, mas a variável ainda não
+está inicializada na linha de acesso, estando na chamada zona morta temporal. Depois, x recebe 15 e y é atualizado para 25, enquanto z mantém seu valor 30.
+Ao declarar var x = 10, a variável x passa a ter o valor 10, já que var permite redefinição.
+Dentro do primeiro bloco, a variável a, declarada com var, tem escopo global, ou seja, permanece acessível fora do bloco, enquanto b e c, declaradas com let e const, existem apenas dentro do bloco, sendo inacessíveis fora dele. Portanto, ao usar console.log(a) fora do bloco, é possível ver o valor 100, mas b e c resultam em undefined ao usar typeof, porque não existem nesse escopo.
+No segundo bloco, a variável m declarada com var também “vaza” para fora, estando disponível globalmente, enquanto n e o permanecem restritas ao bloco, gerando ReferenceError ao tentar acessá-las fora dele. Além disso, ocorre um erro de sintaxe no código ao escrever console.Log com “L” maiúsculo, pois o correto é console.log, gerando TypeError caso o código seja executado.
+Em resumo, esse código demonstra claramente o comportamento de escopo e hoisting em JavaScript: var possui escopo de função e pode ser acessada antes da declaração (como undefined), enquanto let e const possuem escopo de bloco e causam erro se acessadas antes da declaração. Também evidencia que const não pode ser reatribuída, e que erros de digitação em comandos, como console.Log, impedem a execução correta do código.
+
+
+
+
+18 Apesar dos nomes semelhantes, JavaScript e Java são linguagens distintas. O JavaScript é dinâmico, fracamente tipado e baseado em protótipos, sendo muito usado para web, tanto no front-end quanto no back-end com Node.js. Ele roda geralmente em navegadores e é interpretado com otimizações JIT. Já o Java é uma linguagem de tipagem estática, fortemente orientada a objetos baseada em classes e interfaces, muito usada em sistemas corporativos e também em desenvolvimentode aplicativos Android. Enquanto o JavaScript funciona em modelo de execução assíncrono, com event loop, o Java usa múltiplas threads e compila parabytecode executado pela máquina virtual JVM.
+
+
+
+
+19 O operador == realiza comparação com coerção de tipo, ou seja, converte valores diferentes antes de comparar. Por isso, 0 == false resulta em verdadeiro,assim como "42" == 42. Já o operador === faz comparação estrita, levando em conta tipo e valor, sendo portanto mais seguro. Assim, 0 === false resulta em falso e "42" === 42 também é falso, pois string e número não são do mesmo tipo. Outro exemplo é null == undefined, que resulta em verdadeiro, mas null === undefined é falso. Por isso, recomenda-se usar sempre o operador === para evitar resultados inesperados.
+
+
+
+
+20 Os operadores lógicos em JavaScript são usados para combinar ou inverter expressões. O operador && (E lógico) retorna verdadeiro somente se ambas as condições forem verdadeiras. O operador || (OU lógico) retorna verdadeiro se pelo menos uma condição for verdadeira. Já o operador ! (negação) inverte o valor lógico da expressão. Esses operadores também podem retornar valores não booleanos devido ao conceito de curto-circuito. Por exemplo, em uma condição if (user && user.logado),o código só será executado se user existir e estiver logado. Para fornecer valores padrão, pode-se usar let porta = config.port || 3000, que usará 3000 caso config.port 
+seja falso ou indefinido.
+
+
+
+21 Sim, em JavaScript é possível adicionar propriedades a um objeto mesmo depois de sua criação, pois os objetos são dinâmicos. Isso pode ser feito de forma direta, como em um objeto pessoa = {nome: "Ana"} ao adicionar pessoa.idade = 16. Também é possível adicionar propriedades com nomes compostos usando colchetes, por exemplo pessoa["cidade natal"] = "Patrocínio". Além disso, é possível utilizar métodos como Object.assign para mesclar novos atributos em um objeto existente ou ainda usar
+o operador spread, como em let nova = {...pessoa, curso: "Informática"}. Caso se deseje controlar atributos, pode-se usar Object.defineProperty para criar propriedades com configurações específicas.
+
+22 Undefined é o valor padrão de variáveis declaradas, mas não inicializadas, de parâmetros que não foram passados e de propriedades inexistentes de objetos. Null, por outro lado, representa ausência intencional de valor, sendo definido explicitamente pelo programador. Por exemplo, ao declarar let x, seu valor inicial será undefined. Se um objeto não possuir uma propriedade chamada idade, ao acessá-la também será retornado undefined. Já se quisermos dizer que uma variável está vazia de forma proposital, como let y = null, então estamos declarando que y não tem valor no momento, mas de forma intencional.
+
+23 Um objeto em JavaScript é uma estrutura de dados que armazena pares de chave e valor e pode conter tanto propriedades quanto métodos. Ele é usado para representar  entidades do mundo real de forma organizada. Um exemplo de declaração literal seria: let aluno = {nome: "Ana", notas: [9, 8.5], media: function() { return (this.notas[0] + this.notas[1]) / 2; }}. Também é possível criar objetos usando funções construtoras ou classes, por exemplo, function Pessoa(nome) { this.nome = nome; } ou class Pessoa { constructor(nome) { this.nome = nome; } falar() { return "Oi, eu sou " + this.nome; }}. Dessa forma, objetos permitem reunir informações e comportamentos 
+em uma única estrutura.
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
