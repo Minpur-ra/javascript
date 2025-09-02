@@ -1,11 +1,21 @@
 
 
-let salario, soma;
+let familia = 0
+let soma = 0
 
-soma = 0;
-salario = parseFloat(prompt("Digite o salário (0 para encerrar):"));
-while(salario !== 0.0){
-    soma += salario;
-    salario = parseFloat(prompt("Digite o salário (0 para encerrar):"));
+while(true){
+   let fml = prompt(" quer adicionar um membro na familia? sim ou não")
+    if (fml == "sim" ){
+        familia ++}
+        else{
+            alert("o salario final é: "+ soma)
+            break
+        }
+      let salario = Number(prompt("quanto ele recebe?"))
+      if(salario > 0){
+        soma += salario}
+        else{
+            console.log("isso nao eh ideia nao boy")
+        }  
+         
 }
-console.log("Total da família:", soma);
