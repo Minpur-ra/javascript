@@ -2,10 +2,10 @@ let soma = 0;
 let numero;
 
 console.log("While");
-numero = parseInt(prompt("Digite um número (0 para sair):"));
+numero = Number(prompt("Digite um número (0 para sair):"));
 while(numero !== 0){
     soma += numero;
-    numero = parseInt(prompt("Digite outro número (0 para sair):"));
+    numero = Number(prompt("Digite outro número (0 para sair):"));
 }
 
 
@@ -14,7 +14,7 @@ console.log("Somatório:", soma);
 console.log("Do-While");
 soma = 0;
 do{
-    numero = parseInt(prompt("Digite um número (0 para sair):"));
+    numero = Number(prompt("Digite um número (0 para sair):"));
     if(numero !== 0){
         soma += numero;
     }
@@ -26,7 +26,7 @@ soma = 0;
 
 
 for(;;){
-    numero = parseInt(prompt("Digite um número (0 para sair):"));
+    numero = Number(prompt("Digite um número (0 para sair):"));
     if(numero === 0) break;
     soma += numero;
 }
