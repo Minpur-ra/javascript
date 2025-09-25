@@ -7,7 +7,7 @@ for (let i = 0; i < 5; i++) {
 let caro = 0;
 for (let i = 1; i < precos.length; i++) {
   if (precos[i] > precos[caro]) {
-    Caro = i;
+    caro = i;
   }
 }
 
