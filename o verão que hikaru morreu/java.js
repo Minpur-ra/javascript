@@ -1,6 +1,9 @@
 
 
 
+    var x = document.getElementById("musica")
+    x.play()
+
 
 function inf1(){
     const inf = document.getElementById("inf")
@@ -30,5 +33,14 @@ function inf4(){
     }
     else{
         inf4.style.display = "none"
+    }
+}
+function inf5(){
+    const inf5 = document.getElementById("inf5")
+    if(inf5.style.display === "none"){
+        inf5.style.display = "block"
+    }
+    else{
+        inf5.style.display = "none"
     }
 }
