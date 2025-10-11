@@ -1,5 +1,18 @@
 
 
+function musica (){
+    const audio = document.getElementById("audio")
+    const som = document.getElementById("som")
+
+    if(audio.paused){
+        audio.play()
+        som.src = "foto/som-removebg-preview.png"
+    }else{
+        audio.pause()
+        som.src = "foto/off-removebg-preview.png" 
+    }
+}
+
 
 
 function inf1(){
@@ -32,3 +45,4 @@ function inf4(){
         inf4.style.display = "none"
     }
 }
+
