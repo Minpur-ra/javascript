@@ -1,0 +1,54 @@
+
+
+
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+
+}
+body{
+    background-color: rgb(177, 140, 106);
+    backdrop-filter: blur 4px;
+    font-family: sans-serif;
+    padding: 4px;
+}
+
+.img{
+    width: 500px;
+}
+.content{
+    display: flex;
+
+}
+.tex{
+    display: block;
+}
+.imge{
+    display: none;
+}
+@media (max-width: 800px){
+    .texto p{
+        min-width: 350px;
+        max-width: 500px;
+    }
+    body {
+        color: rgb(45, 40, 49);
+    }
+    .content{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .titulo{
+        text-align: center;
+    }
+    .tex{
+        display: none;
+    }
+    .imge{
+        display: block;
+    }
+}
